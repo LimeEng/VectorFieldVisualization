@@ -14,7 +14,6 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import noise.OpenSimplexNoise;
 import operations.vector.VectorOperation;
 
 public class VisualizationApp extends Application {
@@ -33,8 +32,6 @@ public class VisualizationApp extends Application {
     private boolean drawFlag = true;
 
     private final double SCALE_DELTA = 1.1;
-
-    private static final OpenSimplexNoise simplex = new OpenSimplexNoise(42);
 
     @Override
     public void start(Stage stage) throws Exception {
