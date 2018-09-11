@@ -7,7 +7,7 @@ public final class PredefinedOperations {
     private PredefinedOperations() {}
 
     public static VectorOperation switchCoords() {
-        return vector -> new Vector2D(vector.y, vector.x);
+        return vector -> Vector2D.of(vector.y, vector.x);
     }
 
     public static VectorOperation mul(double factor) {
@@ -23,7 +23,7 @@ public final class PredefinedOperations {
     }
 
     public static VectorOperation setVector(double x, double y) {
-        return v -> new Vector2D(x, y);
+        return v -> Vector2D.of(x, y);
     }
 
     public static VectorOperation nop() {
@@ -31,6 +31,6 @@ public final class PredefinedOperations {
     }
 
     public static VectorOperation zero() {
-        return Vector2D::new;
+        return v -> Vector2D.zero();
     }
 }

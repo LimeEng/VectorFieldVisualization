@@ -62,8 +62,8 @@ public class FieldSimulation {
 
         for (double x = MIN_VALUE_X; x <= MAX_VALUE_X; x += STEP) {
             for (double y = MIN_VALUE_Y; y <= MAX_VALUE_Y; y += STEP) {
-                Vector2D distort = new Vector2D(rnd.nextGaussian() * DISTORT, rnd.nextGaussian() * DISTORT);
-                Vector2D vector = new Vector2D(x, y);
+                Vector2D distort = Vector2D.of(rnd.nextGaussian() * DISTORT, rnd.nextGaussian() * DISTORT);
+                Vector2D vector = Vector2D.of(x, y);
                 vector = vector.add(distort);
                 initialPosition.add(vector);
                 points.add(vector);

@@ -10,14 +10,14 @@ public class Vector2DTest {
         for (double i = -5; i < 5; i += 0.3) {
             for (double k = -5; k < 5; k += 0.3) {
                 testConstructor(i, k);
-                testConstructor(new Vector2D(i, k));
+                testConstructor(Vector2D.of(i, k));
             }
         }
     }
 
     @Test
     public void testEmptyConstructor() {
-        Vector2D vector = new Vector2D();
+        Vector2D vector = Vector2D.zero();
         assertEquals(0, vector.x, 0);
         assertEquals(0, vector.y, 0);
         assertEquals(0, vector.getX(), 0);
@@ -25,7 +25,7 @@ public class Vector2DTest {
     }
 
     private void testConstructor(double x, double y) {
-        Vector2D vector = new Vector2D(x, y);
+        Vector2D vector = Vector2D.of(x, y);
         assertEquals(x, vector.x, 0);
         assertEquals(y, vector.y, 0);
         assertEquals(x, vector.getX(), 0);

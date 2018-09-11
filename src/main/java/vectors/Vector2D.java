@@ -7,24 +7,22 @@ public class Vector2D implements Serializable, Comparable<Vector2D> {
 
     private static final long serialVersionUID = 1L;
 
+    private static final Vector2D ZERO = new Vector2D(0, 0);
+
     public final double x;
     public final double y;
 
-    public Vector2D() {
-        this(0.0, 0.0);
-    }
-
-    public Vector2D(Vector2D vector) {
-        this(vector.x, vector.y);
-    }
-
-    public Vector2D(double x, double y) {
+    private Vector2D(double x, double y) {
         this.x = x;
         this.y = y;
     }
 
-    private static Vector2D of(double x, double y) {
+    public static Vector2D of(double x, double y) {
         return new Vector2D(x, y);
+    }
+
+    public static Vector2D zero() {
+        return ZERO;
     }
 
     public Vector2D addScaled(Vector2D other, double factor) {
