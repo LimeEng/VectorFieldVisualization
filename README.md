@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/LimeEng/VectorFieldVisualization.svg?branch=master)](https://travis-ci.com/LimeEng/VectorFieldVisualization)
+![](https://github.com/LimeEng/VectorFieldVisualization/workflows/Java%20CI/badge.svg)
 
 This is an application to visualize vector fields with beautiful, animated, colorful lines. 
 
