@@ -1,3 +1,5 @@
+![](https://github.com/LimeEng/VectorFieldVisualization/workflows/Java%20CI/badge.svg)
+
 This is an application to visualize vector fields with beautiful, animated, colorful lines. 
 
 As of right now, the code base is a bit of a mess. To tweak the program and visualize custom vector fields the source code itself must be modified. In the future it would be awesome if it were possible to dynamically visualize custom vector fields while the program is running. More settings overall needs to be pulled into the UI. 

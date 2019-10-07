@@ -1,0 +1,21 @@
+name: Java CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up JDK 1.8
+      # Hacky workaround to get JavaFX support
+      # Issue: https://github.com/actions/setup-java/issues/18
+      # Commit: https://github.com/actions/setup-java/pull/19
+      uses: actions/setup-java@654e4df6f4f34a8198b3d0c51a3f8417eb377db0
+      with:
+        java-version: 1.8
+        javafx: true
+    - name: Build with Gradle
+      run: ./gradlew build
